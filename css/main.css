@@ -157,14 +157,14 @@ a.mjs-menu-item-link:active {
 .mjs-picture-stack {
     padding-left: 38px;
     padding-top: 36px;
-    height: 296px;
+    height: 348px;
     width: 220px;
 }
 
 .mjs-picture-stack-bg {
     background-image: url('../img/slide-left-bg.png');
     width: 298px;
-    height: 381px;
+    height: 431px;
     float: left;
 }
 
