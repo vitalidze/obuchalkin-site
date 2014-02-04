@@ -154,6 +154,13 @@ a.mjs-menu-item-link:active {
     color: #000;
 }
 
+.mjs-picture-stack {
+    padding-left: 38px;
+    padding-top: 36px;
+    height: 296px;
+    width: 220px;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

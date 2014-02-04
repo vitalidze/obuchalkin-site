@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/tinySlider.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -41,13 +42,28 @@
         <div class="mjs-container" style="height: 400px; background-image: linear-gradient(rgb(235, 131, 246), rgb(151, 7, 140)); padding-top: 30px;">
             <div class="mjs-content-holder">
                 <div style="background-image: url('img/slide-left-bg.png'); width: 298px; height: 381px; float: left;">
-                    <img style="padding-left: 38px; padding-top: 36px;" src="img/love.png" height="296" width="220">
+                    <div class="slides mjs-picture-stack">
+                        <ul>
+                            <li><img src="img/love.png"></li>
+                            <li><img src="img/flower.png"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div style="background-image: url('img/slide-left-bg.png'); width: 298px; height: 381px; float: left;" />
-                    <img style="padding-left: 38px; padding-top: 36px;" src="img/sunset.png" height="296" width="220">
+                    <div class="slides mjs-picture-stack">
+                        <ul>
+                            <li><img src="img/sunset.png"></li>
+                            <li><img src="img/frog.png"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div style="background-image: url('img/slide-left-bg.png'); width: 298px; height: 381px; float: left;">
-                    <img style="padding-left: 38px; padding-top: 36px;" src="img/sea.png" height="296" width="220">
+                    <div class="slides mjs-picture-stack">
+                        <ul>
+                            <li><img src="img/sea.png"></li>
+                            <li><img src="img/strawberry.png"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,10 +111,29 @@
             </div>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/jquery-tinyslider.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+
+
+        <script type="text/javascript">
+            $(document).ready( function() {
+                $('.slides').tinySlider({
+                    pager: false,
+                    nav: false,
+                    random: false,
+                    pauseOnHover: true,
+                    touch: false,
+                    autoplay: true,
+                    cycle: true,
+                    useCSS: true,
+                    animation: 'fade'
+                });
+            });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
