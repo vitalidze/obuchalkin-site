@@ -168,6 +168,37 @@ a.mjs-menu-item-link:active {
     float: left;
 }
 
+.mjs-footer-heading {
+    font-family: 'Times New Roman';
+    font-size: 24px;
+    color: #fff;
+    float: left;
+}
+
+.mjs-footer-link {
+    color: #b5c4c4;
+    text-decoration: none;
+}
+
+.mjs-footer-link:visited {
+    color: #b5c4c4;
+}
+
+.mjs-footer-top-border {
+    border-top: 1px solid #fff;
+}
+
+.mjs-footer-divider {
+    width: 220px;
+    border-top: 1px #fff solid;
+    margin-left: 3px;
+}
+
+.mjs-footer-link-container {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
