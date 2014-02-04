@@ -118,38 +118,25 @@ a.mjs-menu-item-link {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-    color: #fff;
     background-image: linear-gradient(rgb(244, 136, 255), rgb(255, 255, 255));
 }
 
 a.mjs-menu-item-link:visited {
-    color: #000000;
-}
-
-a.mjs-menu-item-link:hover {
-    background: #450034;
-    color: #ffffff;
+    color: #000;
 }
 
 a.mjs-menu-item-link:link {
     color: #000;
 }
 
+a.mjs-menu-item-link:hover {
+    background: #450034;
+    color: #fff;
+}
+
 a.mjs-menu-item-link:active {
     color: #000;
 }
-
-/*a {
-    color: #000;
-    font-weight: 700;
-    text-decoration: none;
-    display:table-cell;
-    vertical-align: middle;
-    width:100px;
-    height:80px;
-}*/
-
-
 
 
 /* ==========================================================================
