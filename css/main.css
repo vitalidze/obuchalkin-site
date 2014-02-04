@@ -101,11 +101,18 @@ textarea {
     min-width: 900px;
 }
 
+.mjs-content-holder {
+    width: 900px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .mjs-menu {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    width: 807px;
+    width: 814px;
     margin-left: auto;
     margin-right: auto;
 }
