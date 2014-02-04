@@ -97,12 +97,21 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.mjs-menu-item {
-    float: left;
+.mjs-container {
+    min-width: 900px;
 }
 
-.mjs-menu-item-text {
+.mjs-menu {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 807px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.mjs-menu-item {
+    float: left;
 }
 
 .mjs-menu-item-spacer {
@@ -137,7 +146,6 @@ a.mjs-menu-item-link:hover {
 a.mjs-menu-item-link:active {
     color: #000;
 }
-
 
 /* ==========================================================================
    Helper classes
