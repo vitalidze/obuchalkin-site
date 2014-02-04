@@ -161,6 +161,13 @@ a.mjs-menu-item-link:active {
     width: 220px;
 }
 
+.mjs-picture-stack-bg {
+    background-image: url('../img/slide-left-bg.png');
+    width: 298px;
+    height: 381px;
+    float: left;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
