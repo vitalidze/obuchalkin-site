@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
+    <title>Обучалкин - {{ page.title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,17 +26,17 @@
 <div class="mjs-container" style="background-image: linear-gradient(rgb(235, 131, 246), rgb(151, 7, 140)); height: 100px;"></div>
 <div class="mjs-container" style="background-image: linear-gradient(rgb(151, 7, 140), rgb(69, 0, 52)); height: 100px;"></div>
 <div class="mjs-container" style="text-align: center; position: relative; top: -160px; margin-bottom: -100px;">
-    <img src="img/logo-white.png">
+    <a href="index.html"><img src="img/logo-white.png"></a>
     <div style="font-size: 14px; color: #f488ff;">&#x2605 РАЗВИВАЮЩИЕ КАРТОЧКИ &#x2605</div>
 </div>
 <div class="mjs-container" style="background-color: #EB83F6; height: 100px;">
     <ul class="mjs-menu">
-        <li class="mjs-menu-item"><a class="mjs-menu-item-link" href="#">Карточки</a></li>
+        <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/cards.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="cards.html">Карточки</a></li>
         <li class="mjs-menu-item mjs-menu-item-spacer">&nbsp;</li>
-        <li class="mjs-menu-item"><a class="mjs-menu-item-link" href="#methodics">Методика обучения</a></li>
+        <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/methodics.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="methodics.html">Методика обучения</a></li>
         <li class="mjs-menu-item mjs-menu-item-spacer">&nbsp;</li>
-        <li class="mjs-menu-item"><a class="mjs-menu-item-link" href="#about">О нас</a></li>
+        <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/about.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="about.html">О нас</a></li>
         <li class="mjs-menu-item mjs-menu-item-spacer">&nbsp;</li>
-        <li class="mjs-menu-item"><a class="mjs-menu-item-link" href="#contacts">Контакты</a></li>
+        <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/contacts.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="contacts.html">Контакты</a></li>
     </ul>
 </div>
