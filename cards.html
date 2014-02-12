@@ -2,3 +2,17 @@
 layout: default
 title: Каталог карточек
 ---
+            {% for cardset in site.data.cardsets %}
+            <div class="mjs-content-holder">
+                <div class="mjs-picture-stack-bg">
+                    <div class="mjs-picture-stack">
+                    </div>
+                    <p style="margin-top: 20px;">
+                        "{{ cardset.title }}" Цена: {{ cardset.price }} руб.
+                    </p>
+                </div>
+
+
+
+            </div>
+            {% endfor %}

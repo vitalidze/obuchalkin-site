@@ -1,0 +1,31 @@
+- id: figures
+  title: Фигуры
+  price: 100
+
+- id: alphabet
+  title: Алфавит
+  price: 250
+
+- id: numbers
+  title: Числа
+  price: 100
+
+- id: colors
+  title: Цвета
+  price: 100
+
+- id: toys
+  title: Игрушки
+  price: 200
+
+- id: nature
+  title: Природа
+  price: 250
+
+- id: vegetables
+  title: Овощи
+  price: 200
+
+- id: fruits
+  title: Фрукты
+  price: 200

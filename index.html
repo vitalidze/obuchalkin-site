@@ -2,8 +2,6 @@
 layout: default
 title: Развивающие карточки
 ---
-
-        <div class="mjs-container" style="height: 460px; background-image: linear-gradient(rgb(235, 131, 246), rgb(151, 7, 140)); padding-top: 30px;">
             <div class="mjs-content-holder">
                 <div class="mjs-picture-stack-bg">
                     <div class="slides mjs-picture-stack">
@@ -30,22 +28,21 @@ title: Развивающие карточки
                     </div>
                 </div>
             </div>
-        </div>
 
-        <script src="js/jquery-tinyslider.min.js"></script>
+            <script src="js/jquery-tinyslider.min.js"></script>
 
-        <script type="text/javascript">
-            $(document).ready( function() {
-                $('.slides').tinySlider({
-                    pager: false,
-                    nav: false,
-                    random: false,
-                    pauseOnHover: true,
-                    touch: false,
-                    autoplay: true,
-                    cycle: true,
-                    useCSS: true,
-                    animation: 'fade'
+            <script type="text/javascript">
+                $(document).ready( function() {
+                    $('.slides').tinySlider({
+                        pager: false,
+                        nav: false,
+                        random: false,
+                        pauseOnHover: true,
+                        touch: false,
+                        autoplay: true,
+                        cycle: true,
+                        useCSS: true,
+                        animation: 'fade'
+                    });
                 });
-            });
-        </script>
+            </script>
