@@ -177,14 +177,16 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
 }
 
 .mjs-footer-heading {
-    font-family: 'Times New Roman';
-    font-size: 24px;
+    font-family: ProximaNovaLight, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
     color: #fff;
     float: left;
 }
 
 .mjs-footer-link {
-    color: #b5c4c4;
+    font-family: ProximaNovaLight, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: rgb(136, 136, 136);
+    font-size: 13px;
     text-decoration: none;
 }
 
@@ -198,7 +200,7 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
 
 .mjs-footer-divider {
     width: 220px;
-    border-top: 1px #fff solid;
+    border-top: 1px rgb(71, 71, 71) solid;
     margin-left: 3px;
 }
 
