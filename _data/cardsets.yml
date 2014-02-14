@@ -1,31 +1,39 @@
 - id: figures
   title: Фигуры
   price: 100
+  count: 1
 
 - id: alphabet
   title: Алфавит
   price: 250
-
-- id: numbers
-  title: Числа
-  price: 100
+  count: 1
 
 - id: colors
   title: Цвета
   price: 100
+  count: 1
+
+- id: numbers
+  title: Числа
+  price: 100
+  count: 1
 
 - id: toys
   title: Игрушки
   price: 200
+  count: 1
 
 - id: nature
   title: Природа
   price: 250
+  count: 1
 
 - id: vegetables
   title: Овощи
   price: 200
+  count: 1
 
 - id: fruits
   title: Фрукты
   price: 200
+  count: 1
