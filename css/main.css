@@ -112,7 +112,7 @@ textarea {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    width: 814px;
+    width: 834px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -207,6 +207,29 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
 .mjs-footer-link-container {
     padding-top: 3px;
     padding-bottom: 3px;
+}
+
+.mjs-text-container {
+    background-color: #fcfcfc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+}
+
+.mjs-text-h2 {
+    font-size: 20px;
+}
+
+.mjs-text-p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.mjs-review-container {
+    height: 900px;
+    margin-bottom: 40px;
 }
 
 /* ==========================================================================
