@@ -222,6 +222,10 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
     font-size: 20px;
 }
 
+.mjs-text-h3 {
+    font-size: 18px;
+}
+
 .mjs-text-p {
     text-align: justify;
     text-indent: 30px;
@@ -230,6 +234,22 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
 .mjs-review-container {
     height: 900px;
     margin-bottom: 40px;
+}
+
+a.mjs-link {
+    color: #105cb6;
+}
+
+a.mjs-link:visited {
+    color: #105cb6;
+}
+
+a.mjs-link:hover {
+    color: #ff48d7;
+}
+
+a.mjs-link:active {
+    color: #000;
 }
 
 /* ==========================================================================
