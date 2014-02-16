@@ -185,7 +185,7 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
 
 .mjs-footer-link {
     font-family: ProximaNovaLight, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: rgb(136, 136, 136);
+    color: #b5c4c4;
     font-size: 13px;
     text-decoration: none;
 }
