@@ -205,7 +205,6 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
     background-image: url('../img/slide-left-bg.png');
     width: 298px;
     height: 431px;
-    float: left;
 }
 
 .mjs-footer-heading {
@@ -290,6 +289,30 @@ a.mjs-link:hover {
 
 a.mjs-link:active {
     color: #000;
+}
+
+.mjs-price-box {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cb8bad;
+    color: #450034;
+    margin: 0 auto;
+    width: 160px;
+}
+
+.mjs-cards-title-container {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.mjs-cards-price-container {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* ==========================================================================

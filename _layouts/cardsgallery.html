@@ -1,7 +1,7 @@
 <div class="mjs-text-container mjs-cards-gallery">
     {% for cardset in site.data.cardsets %}
         {% if page.url contains cardset.id | append: '.html' %}
-            <h2 class="mjs-text-h2">{{ cardset.title }}</h2>
+            <h2 class="mjs-text-h2">{{ cardset.title }} ({{ cardset.pictures.size }} карточек, {{ cardset.price }} руб.)</h2>
             {% for picname in cardset.pictures %}
                 <img src="img/{{cardset.id}}/{{picname}}.{{cardset.pictures-format}}">
             {% endfor %}
