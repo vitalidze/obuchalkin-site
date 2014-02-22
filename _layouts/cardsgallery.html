@@ -14,7 +14,7 @@
                     {% if cardset.back-pictures-format %}
                     <a href="#" onclick="flip_{{picname}}()">
                     {% endif %}
-                        <img src="img/{{cardset.id}}/{{picname}}.{{cardset.pictures-format}}">
+                        <img src="img/{{cardset.id}}/{{picname}}.{{cardset.pictures-format}}" width="140">
                     {% if cardset.back-pictures-format %}
                     </a>
                     {% endif %}
@@ -22,9 +22,10 @@
                 {% if cardset.back-pictures-format %}
                 <script type="text/javascript">
                     function flip_{{picname}}() {
+                        event.preventDefault();
                         $('#pic-{{picname}}').flip({
                             direction: 'lr',
-                            content: '<a href="#" onclick="$(\'#pic-{{picname}}\').revertFlip();"><img src="img/{{cardset.id}}/back/{{picname}}.{{cardset.back-pictures-format}}"></a>',
+                            content: '<a href="#" onclick="$(\'#pic-{{picname}}\').revertFlip();"><img src="img/{{cardset.id}}/back/{{picname}}.{{cardset.back-pictures-format}}" width="140"></a>',
                             speed: 250,
                             onBefore: function(){
                                 console.log('before starting the animation');
