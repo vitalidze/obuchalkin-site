@@ -251,10 +251,17 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
 
 .mjs-cards-gallery {
     width: auto;
-    max-width: 780px;
+    max-width: 1090px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+}
+
+.mjs-gallery-pic {
+    display: inline-block;
+    border: solid #000000 1px;
+    background-color: #ffffff;
+    margin: 5px;
 }
 
 .mjs-text-h2 {

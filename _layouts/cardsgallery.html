@@ -1,9 +1,38 @@
-<div class="mjs-text-container mjs-cards-gallery">
+<div class="mjs-cards-gallery">
     {% for cardset in site.data.cardsets %}
         {% if page.url contains cardset.id | append: '.html' %}
-            <h2 class="mjs-text-h2">{{ cardset.title }} ({{ cardset.pictures.size }} карточек, {{ cardset.price }} руб.)</h2>
+
+            {% if cardset.back-pictures-format %}
+            <script src="js/jquery.flip.min.js" type="text/javascript">
+            </script>
+            <script src="js/jquery-ui-1.10.4.custom.min.js">
+            </script>
+            {% endif %}
+
             {% for picname in cardset.pictures %}
-                <img src="img/{{cardset.id}}/{{picname}}.{{cardset.pictures-format}}">
+                <div id="pic-{{picname}}" class="mjs-gallery-pic">
+                    {% if cardset.back-pictures-format %}
+                    <a href="#" onclick="flip_{{picname}}()">
+                    {% endif %}
+                        <img src="img/{{cardset.id}}/{{picname}}.{{cardset.pictures-format}}">
+                    {% if cardset.back-pictures-format %}
+                    </a>
+                    {% endif %}
+                </div>
+                {% if cardset.back-pictures-format %}
+                <script type="text/javascript">
+                    function flip_{{picname}}() {
+                        $('#pic-{{picname}}').flip({
+                            direction: 'lr',
+                            content: '<a href="#" onclick="$(\'#pic-{{picname}}\').revertFlip();"><img src="img/{{cardset.id}}/back/{{picname}}.{{cardset.back-pictures-format}}"></a>',
+                            speed: 250,
+                            onBefore: function(){
+                                console.log('before starting the animation');
+                            }
+                        });
+                    }
+                </script>
+                {% endif %}
             {% endfor %}
         {% endif %}
     {% endfor %}
