@@ -195,10 +195,19 @@ a.mjs-menu-item-link-selected:visited, a.mjs-menu-item-link-selected:link, a.mjs
 }
 
 .mjs-picture-stack {
-    padding-left: 38px;
-    padding-top: 36px;
     height: 348px;
     width: 220px;
+}
+
+.mjs-picture-slides img {
+    position: absolute;
+    left: 36px;
+    top: 38px;
+}
+
+.mjs-slides-container {
+    float: left;
+    position: relative;
 }
 
 .mjs-picture-stack-bg {
