@@ -21,8 +21,9 @@
 - id: numbers
   title: Числа
   price: 100
-  pictures: [1, 2, 3, 4]
+  pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 0]
   pictures-format: png
+  back-pictures-format: png
 
 - id: toys
   title: Игрушки
