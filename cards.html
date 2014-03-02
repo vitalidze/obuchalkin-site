@@ -2,6 +2,18 @@
 layout: default
 title: Каталог карточек
 ---
+
+    <!-- Sidebar -->
+    <div style="position: fixed; top: 320px; background-color: #fcfcfc; padding: 20px;">
+        <ul style="list-style: none; padding-left: 0px; margin: 0px;">
+            {% assign cardsets = site.data.cardsets | sort: 'title' %}
+            {% for cardset in cardsets %}
+                <li><a href="#{{cardset.id}}" class="mjs-link">{{ cardset.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Card sets -->
     <div class="mjs-content-holder">
     {% for section in site.data.cardsections %}
         <h2 class="mjs-text-h2" style="color: #fbe3eb; text-shadow: 1px 1px 10px #000000; filter: Shadow(Color=#000000, Direction=45, Strength=5);">{{ section.title }}</h2>
@@ -11,6 +23,7 @@ title: Каталог карточек
             <div class="mjs-picture-stack-container" style="margin-bottom: 30px;">
                 <div class="mjs-picture-stack-bg">
                     <div class="mjs-picture-stack">
+                        <a href="#" id="{{cardset.id}}" style="visibility: hidden;"></a>
                         <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img"><img src="img/{{ cardset.id }}/{{cardset.pictures | first}}.{{ cardset.pictures-format }}" width="222"></a>
                     </div>
                 </div>
