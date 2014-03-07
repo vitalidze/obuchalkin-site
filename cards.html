@@ -16,8 +16,8 @@ title: Каталог карточек
     <!-- Card sets -->
     <div class="mjs-content-holder">
     {% for section in site.data.cardsections %}
-        <h2 class="mjs-text-h2" style="color: #fbe3eb; text-shadow: 1px 1px 10px #000000; filter: Shadow(Color=#000000, Direction=45, Strength=5);">{{ section.title }}</h2>
-        <hr />
+        <!-- h2 class="mjs-text-h2" style="color: #fbe3eb; text-shadow: 1px 1px 10px #000000; filter: Shadow(Color=#000000, Direction=45, Strength=5);">{{ section.title }}</h2>
+        <hr / -->
         {% for cardset in site.data.cardsets %}
             {% if section.id == cardset.section %}
             <div class="mjs-picture-stack-container" style="margin-bottom: 30px;">
