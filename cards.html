@@ -2,7 +2,6 @@
 layout: default
 title: Каталог карточек
 ---
-
     <!-- Sidebar -->
     <div style="position: fixed; top: 320px; background-color: #fcfcfc; padding: 20px;">
         <ul style="list-style: none; padding-left: 0px; margin: 0px;">
@@ -13,6 +12,8 @@ title: Каталог карточек
         </ul>
     </div>
 
+    <a class="mjs-link" href="cart.html">В корзине <span class="simpleCart_quantity"></span> товара(ов) - <span class="simpleCart_total"></span></a>
+
     <!-- Card sets -->
     <div class="mjs-content-holder">
     {% for section in site.data.cardsections %}
@@ -20,7 +21,7 @@ title: Каталог карточек
         <hr / -->
         {% for cardset in site.data.cardsets %}
             {% if section.id == cardset.section %}
-            <div class="mjs-picture-stack-container" style="margin-bottom: 30px;">
+            <div class="mjs-picture-stack-container simpleCart_shelfItem" style="margin-bottom: 30px;">
                 <div class="mjs-picture-stack-bg">
                     <div class="mjs-picture-stack">
                         <a href="#" id="{{cardset.id}}" style="visibility: hidden;"></a>
@@ -28,8 +29,9 @@ title: Каталог карточек
                     </div>
                 </div>
                 <div class="mjs-price-box">
-                    <p class="mjs-cards-title-container"><a class="mjs-link" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{cardset.title}}</a></p>
-                    <p class="mjs-cards-price-container"><span style="font-weight: bold;">{{ cardset.price }}</span> руб.</p>
+                    <p class="mjs-cards-title-container"><a class="mjs-link item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{cardset.title}}</a></p>
+                    <p class="mjs-cards-price-container"><span class="item_price" style="font-weight: bold;">{{ cardset.price }}</span> руб.</p>
+                    <p><input type="text" value="1" class="item_Quantity" style="width: 20px;">&nbsp;&nbsp;<a class="mjs-link item_add" href="javascript:;">Купить</a></p>
                 </div>
             </div>
             <script type="text/javascript">

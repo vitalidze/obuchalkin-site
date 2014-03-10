@@ -46,4 +46,24 @@
         <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/contacts.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="contacts.html">Контакты</a></li>
     </ul>
 </div>
+<script src="js/simpleCart.min.js"></script>
+<script>
+    simpleCart({
+        checkout: {
+            type: "SendForm",
+            url: "http://example.com/your/custom/checkout/url"
+        }
+    });
+
+    simpleCart.currency({
+        code: "RUB" ,
+        name: "Рубль" ,
+        symbol: " руб." ,
+        delimiter: " " ,
+        decimal: "," ,
+        after: true ,
+        accuracy: 0
+    });
+
+</script>
 <div class="mjs-container mjs-content">

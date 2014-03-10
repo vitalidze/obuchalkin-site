@@ -1,0 +1,45 @@
+---
+layout: default
+title: Корзина
+---
+
+<script>
+    simpleCart({
+        cartColumns: [
+            { attr: "name" , label: "Набор" } ,
+            { attr: "price" , label: "Цена", view: 'currency' } ,
+            { view: "decrement" , label: false , text: "-" } ,
+            { attr: "quantity" , label: "Кол-во" } ,
+            { view: "increment" , label: false , text: "+" } ,
+            { attr: "total" , label: "Подитог", view: 'currency' } ,
+            { view: "remove" , text: "Убрать" , label: false }
+        ],
+        cartStyle: "table"
+    });
+
+    simpleCart.bind( 'beforeCheckout' , function( data ) {
+        var name = document.getElementById("customer-name").value;
+        var phone = document.getElementById("customer-phone").value;
+        if (name.trim() == "" || phone.trim() == "") {
+            alert("Поля \"Имя\" и \"Телефон\" обязательны для заполнения");
+            return false;
+        }
+        var address = document.getElementById("customer-address").value;
+        data["customer_name"] = name;
+        data["customer_phone"] = phone;
+        data["customer_address"] = address;
+        console.log(data);
+        return false;
+    });
+</script>
+
+<div class="mjs-content-holder mjs-text-container">
+    <div style="margin: 0px auto;">
+        <div class="simpleCart_items"></div>
+        <div>Сумма покупки: <div class="simpleCart_total" style="display: inline-block;"></div></div>
+        <p>Имя: <input id="customer-name" type="text" style="width: 300px;"></p>
+        <p>Телефон: <input id="customer-phone" type="text"></p>
+        <p>Адрес: <input id="customer-address" type="text" style="width: 600px;"></p>
+        <a href="javascript:;" class="simpleCart_checkout">Оформить заказ</a>
+    </div>
+</div>
