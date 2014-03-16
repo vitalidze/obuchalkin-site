@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,14 +37,36 @@
         a:hover.nav-item {
             text-decoration: underline;
         }
+        div.card {
+            display: inline-block;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        .card a {
+            color: #000000;
+        }
     </style>
+    <!--[if lte IE 7]>
+    <style type="text/css">
+        div.card {
+            display: inline;
+            zoom: 1;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+    </style>
+    <![endif]-->
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="browsehappy">Вы используете <strong>старый</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a>.</p>
 <![endif]-->
-<div style="background: linear-gradient(#2b0757, #3d21d6); padding: 20px 20px 20px 20px; margin: 0px;">
+<div style="min-width: 1002px; background: linear-gradient(#2b0757, #3d21d6); padding: 20px 20px 20px 20px; margin: 0px;">
     <div style="width: 1002px; margin: 0 auto;">
         <!-- LOGO -->
         <div style="position: relative;">
@@ -73,8 +97,72 @@
         <div style="height: 400px; background-color: #ffffff;">
         </div>
 
+        <!-- Simple Cart init -->
+        <script src="js/simpleCart.min.js"></script>
+        <script>
+            simpleCart({
+                checkout: {
+                    type: "SendForm",
+                    url: "https://obuchalkin-backend.appspot.com/cart"
+                }
+            });
+
+            simpleCart.currency({
+                code: "RUB" ,
+                name: "Рубль" ,
+                symbol: " руб." ,
+                delimiter: " " ,
+                decimal: "," ,
+                after: true ,
+                accuracy: 0
+            });
+        </script>
+
         <!-- Content -->
-        <div style="margin-top: 30px; background-color: #ffb1ea; height: 800px;">
+        <div style="margin-top: 30px; padding-top: 10px; padding-bottom: 20px; background-color: #ffffff;">
+            <div style="width: 100%; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bold; font-size: 35px; color: #000000;"><span>Карточки</span></div>
+            <div>
+                {% for section in site.data.cardsections %}
+                    {% for cardset in site.data.cardsets %}
+                        {% if section.id == cardset.section %}
+                        <div class="card simpleCart_shelfItem">
+                            <div style="display: inline; float: left;">
+                                <a href="#" id="{{cardset.id}}" style="visibility: hidden;"></a>
+                                <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img"><img src="img/{{ cardset.id }}/{{ cardset.pictures | first}}.{{ cardset.pictures-format }}" width="160" style="border: 1px solid #000000;"></a>
+                            </div>
+                            <div style="display: inline; float: left; margin-left: 20px;">
+                                <span style="font-family: 'Open Sans', sans-serif; font-weight: bold; font-size: 20px; color: #000000;"><a style="" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
+                                <br /><br />
+                                <span style="font-family: 'Open Sans', sans-serif; font-size: 20px; color: #000000;">{{ cardset.price }} руб.</span>
+                                <br /><br />
+                                <span style="font-family: 'Open Sans', sans-serif; font-size: 20px; color: #000000;">{{ cardset.pictures | size }} шт.</span>
+                                <br /><br />
+                                <span style="font-family: 'Open Sans', sans-serif; font-size: 20px; color: #000000;">от 6 месяцев</span>
+                                <br /><br />
+                                <p><input type="text" value="1" class="item_Quantity" style="width: 20px;">&nbsp;&nbsp;<a class="mjs-link item_add" href="javascript:;">Купить</a></p>
+                            </div>
+                        </div>
+                        <!-- div class="mjs-picture-stack-container simpleCart_shelfItem" style="margin-bottom: 30px;">
+                            <div class="mjs-picture-stack-bg">
+                                <div class="mjs-picture-stack">
+                                    <a href="#" id="{{cardset.id}}" style="visibility: hidden;"></a>
+                                    <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img"><img src="img/{{ cardset.id }}/{{cardset.pictures | first}}.{{ cardset.pictures-format }}" width="222"></a>
+                                </div>
+                            </div>
+                            <div class="mjs-price-box">
+                                <p class="mjs-cards-title-container"><a class="mjs-link item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{cardset.title}}</a></p>
+                                <p class="mjs-cards-price-container"><span class="item_price" style="font-weight: bold;">{{ cardset.price }}</span> руб.</p>
+                                <p><input type="text" value="1" class="item_Quantity" style="width: 20px;">&nbsp;&nbsp;<a class="mjs-link item_add" href="javascript:;">Купить</a></p>
+                            </div>
+                        </div -->
+                        <script type="text/javascript">
+                            $(document).ready(function() {$('#{{cardset.id}}-popup-link-img').magnificPopup({type: 'ajax'})});
+                            $(document).ready(function() {$('#{{cardset.id}}-popup-link-txt').magnificPopup({type: 'ajax'})});
+                        </script>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
