@@ -1,5 +1,5 @@
 - id: first
-  title: Мой первый\nнабор
+  title: Мой первый набор
   price: 200
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
   pictures-format: png
@@ -64,7 +64,7 @@
   section: fidget
 
 - id: pets
-  title: Домашние\nживотные
+  title: Домашние животные
   price: 250
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
   pictures-format: png
