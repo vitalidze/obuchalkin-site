@@ -152,14 +152,14 @@
         </script>
 
         <!-- Content -->
-        <div style="margin-top: 30px; padding-top: 10px; padding-bottom: 20px; background-color: #ffffff;">
+        <div style="margin-top: 30px; padding-top: 10px; padding-bottom: 20px; background-image: url('img/Website-Background-30.png');">
             <div style="width: 100%; text-align: center; font-family: 'Open Sans', sans-serif; font-weight: bold; font-size: 35px; color: #000000;"><span>Карточки</span></div>
             <div>
                 {% for section in site.data.cardsections %}
                     {% for cardset in site.data.cardsets %}
                         {% if section.id == cardset.section %}
                         <div class="card simpleCart_shelfItem">
-                            <div style="display: inline; float: left;">
+                            <div style="display: inline; float: left; background: #ffffff;">
                                 <a href="#" id="{{cardset.id}}" style="visibility: hidden;"></a>
                                 <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img"><img src="img/{{ cardset.id }}/{{ cardset.pictures | first}}.{{ cardset.pictures-format }}" width="160" style="border: 1px solid #000000;"></a>
                             </div>
