@@ -54,6 +54,7 @@ div.page {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b0757', endColorstr='#3d21d6',GradientType=0 );  /* IE6-9 */
     background: -moz-linear-gradient(top, #2b0757, #3d21d6);  /* for firefox 3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, from(#2b0757), to(#3d21d6));  /* for webkit browsers */
+    height: 100%;
 }
 
 div.page-content {
