@@ -110,3 +110,53 @@ div.content {
     padding-bottom: 20px;
     background-image: url('/img/Website-Background-30.png');
 }
+
+h2.heading {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #000000;
+}
+
+div.card-image {
+    display: inline;
+    float: left;
+    background: #ffffff;
+}
+
+img.card-image {
+    width: 160px;
+    border: 1px solid #000000;
+}
+
+div.card-text {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+
+a.card-title {
+    text-decoration: underline;
+}
+
+a:hover.card-title {
+    text-decoration: none;
+}
+
+span.card-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+a.card-buy {
+    text-decoration: underline;
+}
+
+a:hover.card-buy {
+    text-decoration: none;
+}
+
+div.card-info {
+    margin-top: 28px;
+}
