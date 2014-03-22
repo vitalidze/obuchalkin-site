@@ -10,60 +10,101 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <style>
+        div.card {
+            display: inline-block;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
 
+        .mjs-gallery-pic {
+            display: inline-block;
+            border: solid #000000 1px;
+            background-color: #ffffff;
+            margin: 5px;
+            width: 140px;
+            height: 210px;
+        }
+    </style>
+    <!--[if lte IE 7]>
+    <style type="text/css">
+        div.card {
+            display: inline;
+            zoom: 1;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        .mjs-gallery-pic {
+            display: inline;
+            zoom: 1;
+            border: solid #000000 1px;
+            background-color: #ffffff;
+            margin: 5px;
+            width: 140px;
+            height: 210px;
+        }
+    </style>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/new.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/tinySlider.css">
-    <!-- script src="js/vendor/modernizr-2.6.2.min.js"></script -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    {% if page.url == '/cards.html' %}
-    <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- Magnific Popup core JS file -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
-    {% endif %}
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="browsehappy">Вы используете <strong>старый</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a>.</p>
 <![endif]-->
+<div class="page">
+    <div class="page-content">
+        <!-- LOGO -->
+        <div class="header">
+            <div class="header-left">
+                <p><a href="/"><span class="heading" style="font-weight: bold; font-size: 62px;">Обучалкин</span></a></p>
+                <p><span class="heading" style="font-size: 21px;">&#x2605 РАЗВИВАЮЩИЕ КАРТОЧКИ &#x2605</span> </p>
+            </div>
+            <div class="header-right">
+                <div class="header-quicklinks">
+                    <a href="/"><img src="img/home-small.png"></a>
+                    &nbsp;<a href="mailto:kartochkiobuchalkina@gmail.com"><img src="img/mail-small.png"></a>
+                    &nbsp;<a href="cart.html"><img src="img/cart-small.png"></a>
+                    &nbsp;<a href="http://vk.com/obuchalkincom" target="_blank"><img src="img/vk-small.png"></a>
+                </div>
+                <div class="header-phone"><span class="heading" style="font-size: 36px; font-weight: bold;">8-929-677-15-45</span></div>
+            </div>
+        </div>
 
-<div class="mjs-container mjs-logo-top-part"></div>
-<div class="mjs-container mjs-logo-bottom-part"></div>
-<div class="mjs-container" style="text-align: center; position: relative; top: -160px; margin-bottom: -100px;">
-    <a href="index.html"><img src="img/logo-white.png"></a>
-    <div style="font-size: 14px; color: #f488ff;">РАЗВИВАЮЩИЕ КАРТОЧКИ</div>
-</div>
-<div class="mjs-container" style="background-color: #EB83F6; height: 100px;">
-    <ul class="mjs-menu">
-        <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/cards.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="cards.html">Карточки</a></li>
-        <li class="mjs-menu-item mjs-menu-item-spacer">&nbsp;</li>
-        <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/methodics.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="methodics.html">Методика обучения</a></li>
-        <li class="mjs-menu-item mjs-menu-item-spacer">&nbsp;</li>
-        <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/reviews.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="reviews.html">Отзывы</a></li>
-        <li class="mjs-menu-item mjs-menu-item-spacer">&nbsp;</li>
-        <li class="mjs-menu-item"><a class="mjs-menu-item-link {% if page.url == '/contacts.html' %} mjs-menu-item-link-selected {% else %} mjs-menu-item-link-default {% endif %}" href="contacts.html">Контакты</a></li>
-    </ul>
-</div>
-<script src="js/simpleCart.min.js"></script>
-<script>
-    simpleCart({
-        checkout: {
-            type: "SendForm",
-            url: "http://example.com/your/custom/checkout/url"
-        }
-    });
+        <!-- NAV -->
+        <div class="nav">
+            <ul class="nav">
+                <li class="nav-item" style="background-image: url('img/nav-item-1.png');"><a class="nav-item" href="#">Карточки</a></li>
+                <li class="nav-item" style="background-image: url('img/nav-item-2.png');"><a class="nav-item" href="#">Метод</a></li>
+                <li class="nav-item" style="background-image: url('img/nav-item-3.png');"><a class="nav-item" href="#">Как заниматься</a></li>
+                <li class="nav-item" style="background-image: url('img/nav-item-4.png');"><a class="nav-item" href="#">Оплата и доставка</a></li>
+                <li class="nav-item" style="background-image: url('img/nav-item-5.png');"><a class="nav-item" href="#">Отзывы</a></li>
+                <li class="nav-item" style="background-image: url('img/nav-item-6.png');"><a class="nav-item" href="#">Контакты</a></li>
+            </ul>
+        </div>
 
-    simpleCart.currency({
-        code: "RUB" ,
-        name: "Рубль" ,
-        symbol: " руб." ,
-        delimiter: " " ,
-        decimal: "," ,
-        after: true ,
-        accuracy: 0
-    });
+        <!-- Simple Cart init -->
+        <script src="js/simpleCart.min.js"></script>
+        <script>
+            simpleCart({
+                checkout: {
+                    type: "SendForm",
+                    url: "https://obuchalkin-backend.appspot.com/cart"
+                }
+            });
 
-</script>
-<div class="mjs-container mjs-content">
+            simpleCart.currency({
+                code: "RUB" ,
+                name: "Рубль" ,
+                symbol: " руб." ,
+                delimiter: " " ,
+                decimal: "," ,
+                after: true ,
+                accuracy: 0
+            });
+        </script>
