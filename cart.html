@@ -24,22 +24,98 @@ title: Корзина
             alert("Поля \"Имя\" и \"Телефон\" обязательны для заполнения");
             return false;
         }
-        var address = document.getElementById("customer-address").value;
-        data["customer_name"] = name;
-        data["customer_phone"] = phone;
-        data["customer_address"] = address;
-        console.log(data);
-        return false;
+
+        data["customerName"] = name;
+        data["customerPhone"] = phone;
+        data["customerAddress"] = document.getElementById("customer-address").value;
+        data["customerEmail"] = document.getElementById("customer-email").value;
     });
 </script>
 
-<div class="mjs-content-holder mjs-text-container">
+<div class="content text-content">
     <div style="margin: 0px auto;">
+        <h2 class="text">Корзина</h2>
         <div class="simpleCart_items"></div>
         <div>Сумма покупки: <div class="simpleCart_total" style="display: inline-block;"></div></div>
-        <p>Имя: <input id="customer-name" type="text" style="width: 300px;"></p>
-        <p>Телефон: <input id="customer-phone" type="text"></p>
-        <p>Адрес: <input id="customer-address" type="text" style="width: 600px;"></p>
+        <h3 class="text">Контактные данные</h3>
+        <table>
+            <tr>
+                <td class="label">Имя<span class="remark">*</span>:</td>
+                <td class="value"><input id="customer-name" type="text" style="width: 300px;"></td>
+            </tr>
+            <tr>
+                <td class="label">Телефон<span class="remark">*</span>:</td>
+                <td class="value"><input id="customer-phone" type="text"></td>
+            </tr>
+            <tr>
+                <td class="label">Эл. почта:</td>
+                <td class="value"><input id="customer-email" type="email"></td>
+            </tr>
+            <tr>
+                <td class="label">Способ доставки<span class="remark">*</span>:</td>
+                <td class="value">
+                    <p style="margin-top: 0px;">
+                        <a href="#" class="tab-selected" id="self-link">Самовывоз</a>
+                        <a href="#" class="tab-not-selected" id="delivery-link">Доставка курьером</a>
+                    </p>
+                    <div id="self-params">
+                        <div>
+                            <input type="radio" name="pick-point" value="elma" id="rb-pick-point-elma"> <a href="#" id="a-pick-point-elma">Завод Элма</a>
+                            <div style="margin-left: 17px; margin-bottom: 10px; margin-top: 5px;"><span style="color: #787878;">Москва, Зеленоград, проезд 4922 (Озерная аллея), дом 4, стр. 5</span></div>
+                        </div>
+                        <div>
+                            <input type="radio" name="pick-point" value="kontorshik" id="rb-pick-point-kontorshik"> <a href="#" id="a-pick-point-kontorshik">Магазин Конторщик</a>
+                            <div style="margin-left: 17px; margin-bottom: 10px; margin-top: 5px;"><span style="color: #787878;">Москва, Зеленоград, корп. 514, 5ТЦ</span></div>
+                        </div>
+                        <div>
+                            <input type="radio" name="pick-point" value="oktopole" id="rb-pick-point-oktopole"> <a href="#" id="a-pick-point-oktopole">Офис на Октябрьском поле</a>
+                            <div style="margin-left: 17px; margin-bottom: 10px; margin-top: 5px;"><span style="color: #787878;">Москва, ул. Маршала Бирюзова, д. 4, к. 2, подъезд 3, офис 222</span></div>
+                        </div>
+                    </div>
+                    <div id="delivery-params" style="display: none;">
+                        <div>Адрес: <input id="customer-address" type="text" style="width: 600px;"></div>
+                        <div style="margin-top: 10px;"><span class="remark">На данный момент доставка осуществляется только по городу Зеленоград</span></div>
+                    </div>
+
+                    <script type="text/javascript">
+                        ['self', 'delivery'].forEach(function(s) {
+                            $('#' + s + '-link').click(function() {
+                                tab_toggle($(this).attr('id'))
+                                event.preventDefault()
+                            })
+                        })
+
+                        function tab_toggle(id) {
+                            var clicked = id.substring(0, id.length - 5)
+                            $('#' + id).attr('class', 'tab-selected')
+                            $('#' + opposite(id) + '-link').attr('class', 'tab-not-selected')
+
+                            $('#' + clicked + '-params').toggle()
+                            $('#' + opposite(id) + '-params').toggle()
+
+                            $('#pickyp-type').prop('value', clicked)
+                        }
+
+                        function opposite(id) {
+                            if (id.indexOf('self') == 0) {
+                                return 'delivery'
+                            }
+                            return 'self'
+                        }
+
+                        ['elma', 'kontorshik', 'oktopole'].forEach(function(s) {
+                            $('#a-pick-point-' + s).click(function() {
+                                $('#rb-pick-point-' + s).prop('checked', true)
+                                event.preventDefault()
+                            })
+                        })
+                    </script>
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="pickup-type" value="self" id="pickup-type">
+        <a href="Самовывоз"></a>
+
         <a href="javascript:;" class="simpleCart_checkout">Оформить заказ</a>
     </div>
 </div>
