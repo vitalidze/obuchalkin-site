@@ -212,3 +212,48 @@ a.tab-not-selected {
     color: #105cb6;
     text-decoration: dashed;
 }
+
+tr.headerRow {
+    color: #717171;
+}
+
+tr.headerRow td {
+    padding: 10px;
+}
+
+td.item-price {
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+}
+
+td.item-quantity {
+    text-align: right;
+    padding: 10px;
+}
+
+td.item-name {
+    padding: 10px;
+}
+
+td.item-total {
+    padding: 10px;
+    text-align: right;
+    font-weight: bold;
+}
+
+td.item-remove {
+    padding: 10px;
+}
+
+div.simpleCart_grandTotal {
+    display: inline;
+    font-weight: bold;
+    color: #ed1c24;
+}
+
+div.simpleCart_shipping {
+    display: inline;
+    font-weight: bold;
+    color: #ed1c24;
+}

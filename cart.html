@@ -36,7 +36,8 @@ title: Корзина
     <div style="margin: 0px auto;">
         <h2 class="text">Корзина</h2>
         <div class="simpleCart_items"></div>
-        <div>Сумма покупки: <div class="simpleCart_total" style="display: inline-block;"></div></div>
+        <div style="margin-top: 10px;">Доставка: <div class="simpleCart_shipping"></div>
+        <div style="margin-top: 10px;">Итого: <div class="simpleCart_grandTotal"></div></div>
         <h3 class="text">Контактные данные</h3>
         <table>
             <tr>
@@ -94,6 +95,12 @@ title: Корзина
                             $('#' + opposite(id) + '-params').toggle()
 
                             $('#pickyp-type').prop('value', clicked)
+
+                            simpleCart({
+                                 shippingFlatRate: (clicked == 'delivery' && simpleCart.total() < 3000 ? 150 : 0)
+                            });
+
+                            simpleCart.update()
                         }
 
                         function opposite(id) {
