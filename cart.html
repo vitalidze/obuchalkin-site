@@ -79,7 +79,7 @@ title: Корзина
 
                     <script type="text/javascript">
                         ['self', 'delivery'].forEach(function(s) {
-                            $('#' + s + '-link').click(function() {
+                            $('#' + s + '-link').click(function(event) {
                                 tab_toggle($(this).attr('id'))
                                 event.preventDefault()
                             })
@@ -104,7 +104,7 @@ title: Корзина
                         }
 
                         ['elma', 'kontorshik', 'oktopole'].forEach(function(s) {
-                            $('#a-pick-point-' + s).click(function() {
+                            $('#a-pick-point-' + s).click(function(event) {
                                 $('#rb-pick-point-' + s).prop('checked', true)
                                 event.preventDefault()
                             })
