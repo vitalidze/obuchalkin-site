@@ -34,6 +34,9 @@ a.nav-item {
     color: #ffffff;
     text-decoration: none;
 }
+a.nav-item-selected {
+    text-decoration: underline;
+}
 a:hover.nav-item {
     text-decoration: underline;
 }
