@@ -98,13 +98,6 @@ div.header-phone {
 div.header-photo {
 }
 
-div.header-photo-overflow {
-    margin-top: -130px;
-    margin-left: -26px;
-    margin-right: -30px;
-    position: relative;
-}
-
 div.content {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -119,20 +112,18 @@ h2.heading {
 }
 
 div.card-image {
-    display: inline;
+    display: block;
     float: left;
     background: #ffffff;
 }
 
 img.card-image {
-    width: 160px;
+    width: 120px;
     border: 1px solid #000000;
+    z-index: 100;
 }
 
 div.card-text {
-    display: inline;
-    float: left;
-    margin-left: 20px;
 }
 
 a.card-title {
@@ -149,6 +140,20 @@ span.card-title {
     color: #000000;
 }
 
+span.item_price {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    color: #000000;
+    font-weight: bold;
+}
+
+span.item_currency {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
 a.card-buy {
     text-decoration: underline;
 }
@@ -159,6 +164,7 @@ a:hover.card-buy {
 
 div.card-info {
     margin-top: 28px;
+    text-align: center;
 }
 
 h2.text {

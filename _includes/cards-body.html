@@ -2,26 +2,39 @@
     {% for section in site.data.cardsections %}
     {% for cardset in site.data.cardsets %}
     {% if section.id == cardset.section %}
-    <div class="card simpleCart_shelfItem">
-        <div class="card-image">
-            <a href="#" id="{{cardset.id}}" style="visibility: hidden;"></a>
-            <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img"><img src="img/{{ cardset.id }}/{{ cardset.pictures | first}}.{{ cardset.pictures-format }}" class="card-image"></a>
+    <div class="card simpleCart_shelfItem" style="width: 305px; background: #ffffff; padding-top: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+        <div style="text-align: center;">
+            <span class="card-title" style="font-weight: bold;"><a class="card-title item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
+        </div>
+        <div style="height: 260px; width: 200px; padding-left: 10px; margin-top: 40px;">
+            <div style="position: absolute; z-index: 10; background: #ffffff; margin-top: 40px;">
+                <img src="img/{{ cardset.id }}/{{ cardset.pictures[0] }}.{{ cardset.pictures-format }}" class="card-image">
+            </div>
+            <div style="position: absolute; z-index: 9; background: #ffffff; margin-left: 60px;">
+                <img src="img/{{ cardset.id }}/{{ cardset.pictures[1] }}.{{ cardset.pictures-format }}" class="card-image">
+            </div>
+            <div style="position: absolute; z-index: 8; background: #ffffff; margin-left: 120px; margin-top: 60px;">
+                <img src="img/{{ cardset.id }}/{{ cardset.pictures[2] }}.{{ cardset.pictures-format }}" class="card-image">
+            </div>
+            <div style="position: absolute; z-index: 7; background: #ffffff; margin-left: 160px; margin-top: 40px;">
+                <img src="img/{{ cardset.id }}/{{ cardset.pictures[3] }}.{{ cardset.pictures-format }}" class="card-image">
+            </div>
         </div>
         <div class="card-text">
-            <div style="height: 30px; width: 127px;">
-                <span class="card-title" style="font-weight: bold;"><a class="card-title item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
-            </div>
-            <div class="card-info">
-                <span class="card-title item_price">{{ cardset.price }} руб.</span>
-            </div>
             <div class="card-info">
                 <span class="card-title">{{ cardset.pictures | size }} шт.</span>
             </div>
             <div class="card-info">
-                <span class="card-title">от 6 месяцев</span>
+                <span class="card-title">для детей от 6 месяцев</span>
             </div>
-            <div class="card-info">
-                <p><input type="hidden" value="1" class="item_Quantity" style="width: 20px;"><a class="item_add card-buy" href="javascript:;">Купить</a></p>
+            <div class="card-info" style="position: relative; height: 55px;">
+                <input type="hidden" value="1" class="item_Quantity" style="width: 20px;">
+                <div style="text-align: left; margin-left: 15px; padding-top: 3px;">
+                    <span class="item_price">{{ cardset.price }}</span><span class="item_currency"> руб.</span>
+                </div>
+                <div style="position: absolute; top: 0px; right: 10px;">
+                    <a class="item_add card-buy" href="javascript:;"><img src="img/buy-button.png"></a>
+                </div>
             </div>
         </div>
     </div>
