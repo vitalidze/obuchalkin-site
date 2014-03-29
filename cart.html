@@ -8,9 +8,7 @@ title: Корзина
         cartColumns: [
             { attr: "name" , label: "Набор" } ,
             { attr: "price" , label: "Цена", view: 'currency' } ,
-            { view: "decrement" , label: false , text: "-" } ,
-            { attr: "quantity" , label: "Кол-во" } ,
-            { view: "increment" , label: false , text: "+" } ,
+            { view:'input', attr: "quantity" , label: "Кол-во" } ,
             { attr: "total" , label: "Подитог", view: 'currency' } ,
             { view: "remove" , text: "Убрать" , label: false }
         ],

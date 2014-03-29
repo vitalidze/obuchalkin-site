@@ -229,6 +229,10 @@ td.item-quantity {
     padding: 10px;
 }
 
+td.item-quantity input {
+    width: 20px;
+}
+
 td.item-name {
     padding: 10px;
 }
