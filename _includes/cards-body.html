@@ -1,17 +1,16 @@
-<div style="width: 100%; text-align: center;"><h2 class="heading">Карточки</h2></div>
 <div>
     {% for section in site.data.cardsections %}
     {% for cardset in site.data.cardsets %}
     {% if section.id == cardset.section %}
     <div class="card simpleCart_shelfItem">
+        <div style="height: 30px; width: 127px; margin-bottom: 20px; text-align: center;">
+            <span class="card-title" style="font-weight: bold;"><a class="card-title item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
+        </div>
         <div class="card-image">
             <a href="#" id="{{cardset.id}}" style="visibility: hidden;"></a>
             <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img"><img src="img/{{ cardset.id }}/{{ cardset.pictures | first}}.{{ cardset.pictures-format }}" class="card-image"></a>
         </div>
         <div class="card-text">
-            <div style="height: 30px; width: 127px;">
-                <span class="card-title" style="font-weight: bold;"><a class="card-title item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
-            </div>
             <div class="card-info">
                 <span class="card-title item_price">{{ cardset.price }} руб.</span>
             </div>
