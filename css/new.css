@@ -91,11 +91,12 @@ div.header-quicklinks {
 
 div.header-phone {
     margin: 0 auto;
-    width: 225px;
+    width: 228px;
     margin-top: 5px;
 }
 
 div.header-photo {
+    margin-bottom: -5px;
 }
 
 div.content {
