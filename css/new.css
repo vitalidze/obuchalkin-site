@@ -254,3 +254,10 @@ div.simpleCart_shipping {
     font-weight: bold;
     color: #ed1c24;
 }
+
+div.footer {
+    position: relative;
+    background: #1c0732;
+    padding: 10px;
+    height: 100px;
+}
