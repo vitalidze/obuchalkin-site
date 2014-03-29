@@ -18,14 +18,15 @@ ul.nav {
 }
 li.nav-item {
     display: table-cell;
-    vertical-align: bottom;
+    vertical-align: middle;
     text-align: center;
     margin: 0;
-    width: 167px;
-    height: 100px;
+    height: 40px;
+    padding-top: 5px;
     padding-bottom: 5px;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
 }
 a.nav-item {
     font-family: 'Open Sans', sans-serif;
@@ -35,9 +36,6 @@ a.nav-item {
     text-decoration: none;
 }
 a.nav-item-selected {
-    text-decoration: underline;
-}
-a:hover.nav-item {
     text-decoration: underline;
 }
 
@@ -54,14 +52,9 @@ a:hover.nav-item {
 
 div.page {
     min-width: 1002px;
-    background: linear-gradient(#2b0757, #3d21d6);
+    background: #ffffff;
     padding: 20px 20px 20px 20px;
     margin: 0px;
-    background: #3d21d6;
-    background: linear-gradient(#2b0757, #3d21d6);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b0757', endColorstr='#3d21d6',GradientType=0 );  /* IE6-9 */
-    background: -moz-linear-gradient(top, #2b0757, #3d21d6);  /* for firefox 3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, from(#2b0757), to(#3d21d6));  /* for webkit browsers */
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -74,10 +67,12 @@ div.page-content {
 
 div.header {
     position: relative;
+    background: #2b0757;
+    padding: 10px;
 }
 
 div.header-left {
-    margin: 0px;
+    margin: 0px 0px 0px 10px;
 }
 
 .heading {
@@ -88,20 +83,20 @@ div.header-left {
 div.header-right {
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 10px;
 }
 
 div.header-quicklinks {
     margin-left: auto;
     margin-right: 0;
     width: 140px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 div.header-phone {
     margin: 0 auto;
-    width: 270px;
-    margin-top: 20px;
+    width: 225px;
+    margin-top: 5px;
 }
 
 div.header-photo {
