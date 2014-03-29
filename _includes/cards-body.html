@@ -7,18 +7,20 @@
             <span class="card-title" style="font-weight: bold;"><a class="card-title item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
         </div>
         <div style="height: 260px; width: 200px; padding-left: 10px; margin-top: 40px;">
-            <div style="position: absolute; z-index: 10; background: #ffffff; margin-top: 40px;">
-                <img src="img/{{ cardset.id }}/{{ cardset.pictures[0] }}.{{ cardset.pictures-format }}" class="card-image">
-            </div>
-            <div style="position: absolute; z-index: 9; background: #ffffff; margin-left: 60px;">
-                <img src="img/{{ cardset.id }}/{{ cardset.pictures[1] }}.{{ cardset.pictures-format }}" class="card-image">
-            </div>
-            <div style="position: absolute; z-index: 8; background: #ffffff; margin-left: 120px; margin-top: 60px;">
-                <img src="img/{{ cardset.id }}/{{ cardset.pictures[2] }}.{{ cardset.pictures-format }}" class="card-image">
-            </div>
-            <div style="position: absolute; z-index: 7; background: #ffffff; margin-left: 160px; margin-top: 40px;">
-                <img src="img/{{ cardset.id }}/{{ cardset.pictures[3] }}.{{ cardset.pictures-format }}" class="card-image">
-            </div>
+            <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img">
+                <div style="position: absolute; z-index: 10; background: #ffffff; margin-top: 40px;">
+                    <img src="img/{{ cardset.id }}/{{ cardset.pictures[0] }}.{{ cardset.pictures-format }}" class="card-image">
+                </div>
+                <div style="position: absolute; z-index: 9; background: #ffffff; margin-left: 60px;">
+                    <img src="img/{{ cardset.id }}/{{ cardset.pictures[1] }}.{{ cardset.pictures-format }}" class="card-image">
+                </div>
+                <div style="position: absolute; z-index: 8; background: #ffffff; margin-left: 120px; margin-top: 60px;">
+                    <img src="img/{{ cardset.id }}/{{ cardset.pictures[2] }}.{{ cardset.pictures-format }}" class="card-image">
+                </div>
+                <div style="position: absolute; z-index: 7; background: #ffffff; margin-left: 160px; margin-top: 40px;">
+                    <img src="img/{{ cardset.id }}/{{ cardset.pictures[3] }}.{{ cardset.pictures-format }}" class="card-image">
+                </div>
+            </a>
         </div>
         <div class="card-text">
             <div class="card-info">

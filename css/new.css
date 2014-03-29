@@ -127,7 +127,7 @@ div.card-text {
 }
 
 a.card-title {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:hover.card-title {
