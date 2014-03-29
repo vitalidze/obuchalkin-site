@@ -84,7 +84,14 @@
                 <li class="nav-item" style="background: #ffff00;"><a class="nav-item {% if page.url == '/delivery.html' %}nav-item-selected{% endif %}" href="delivery.html">Доставка и оплата</a></li>
                 <li class="nav-item" style="background: #3ef61b;"><a class="nav-item {% if page.url == '/reviews.html' %}nav-item-selected{% endif %}" href="reviews.html">Отзывы</a></li>
                 <li class="nav-item" style="background: #67e6f5;"><a class="nav-item {% if page.url == '/contacts.html' %}nav-item-selected{% endif %}" href="contacts.html">Контакты</a></li>
-                <li class="nav-item" style="background: #872e8b; width: 100%;"><a class="nav-item {% if page.url == '/cart.html' %}nav-item-selected{% endif %}" href="cart.html">Корзина</a></li>
+                <li class="nav-item" style="background: #872e8b; width: 100%;">
+                    <a class="nav-item" href="cart.html">
+                        <div class="simpleCart_quantity" style="padding-right: 10px; display: table-cell; vertical-align: middle; max-width: 30px;"></div>
+                        <div style="display: table-cell;"><img width="40" src="img/shopping_basket.png"></div>
+                        <div class="simpleCart_grandTotal" style="padding-left: 5px; color: #adadad; font-size: 14px; font-weight: normal; display: table-cell; vertical-align: middle; text-align: right; max-width: 75px; width: 75px;"></div>
+                    </a>
+
+                </li>
             </ul>
         </div>
 
