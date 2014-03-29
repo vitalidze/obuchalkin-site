@@ -12,7 +12,7 @@
             {% for picname in cardset.pictures %}
                 <div id="pic-{{picname}}" class="mjs-gallery-pic">
                     {% if cardset.back-pictures-format %}
-                    <a href="#" onclick="flip_{{picname}}()">
+                    <a href="#" onclick="flip_{{picname}}(event);">
                     {% endif %}
                         <img src="img/{{cardset.id}}/{{picname}}.{{cardset.pictures-format}}" width="140">
                     {% if cardset.back-pictures-format %}
@@ -21,14 +21,19 @@
                 </div>
                 {% if cardset.back-pictures-format %}
                 <script type="text/javascript">
-                    function flip_{{picname}}() {
-                        event.preventDefault();
+                    function flip_{{picname}}(event) {
                         $('#pic-{{picname}}').flip({
                             direction: 'lr',
-                            content: '<a href="#" onclick="$(\'#pic-{{picname}}\').revertFlip(); event.preventDefault();"><img src="img/{{cardset.id}}/back/{{picname}}.{{cardset.back-pictures-format}}" width="140"></a>',
+                            content: '<a href="#" onclick="flip_back_{{picname}}(event);"><img src="img/{{cardset.id}}/back/{{picname}}.{{cardset.back-pictures-format}}" width="140"></a>',
                             speed: 250,
                             color: 'white'
                         });
+                        event.preventDefault();
+                    }
+
+                    function flip_back_{{picname}}(event) {
+                        $('#pic-{{picname}}').revertFlip();
+                        event.preventDefault();
                     }
                 </script>
                 {% endif %}
