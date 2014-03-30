@@ -44,6 +44,7 @@ a.nav-item-selected {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    background: #ffffff;
 }
 
 div.page {
