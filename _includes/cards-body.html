@@ -4,9 +4,9 @@
     {% if section.id == cardset.section %}
     <div class="card simpleCart_shelfItem" style="width: 305px; background: #ffffff; padding-top: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
         <div style="text-align: center;">
-            <span class="card-title" style="font-weight: bold;"><a class="card-title item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
+            <span class="card-title" style="font-weight: bold; font-size: 22px;"><a class="card-title item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
         </div>
-        <div style="height: 260px; width: 200px; padding-left: 10px; margin-top: 40px;">
+        <div style="height: 220px; width: 200px; padding-left: 10px; margin-top: 10px;">
             <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img">
                 <div style="position: absolute; z-index: 10; background: #ffffff; margin-top: 40px;">
                     <img src="img/{{ cardset.id }}/{{ cardset.pictures[0] }}.{{ cardset.pictures-format }}" class="card-image">
@@ -24,10 +24,7 @@
         </div>
         <div class="card-text">
             <div class="card-info">
-                <span class="card-title">{{ cardset.pictures | size }} шт.</span>
-            </div>
-            <div class="card-info">
-                <span class="card-title">для детей от 6 месяцев</span>
+                <span class="card-title">В набор входит {{ cardset.pictures | size }} карточка, размер 10х15 см, ламинированная с двух сторон, для детей от 6 месяцев</span>
             </div>
             <div class="card-info" style="position: relative; height: 55px;">
                 <input type="hidden" value="1" class="item_Quantity" style="width: 20px;">
