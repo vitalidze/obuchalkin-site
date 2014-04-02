@@ -6,6 +6,15 @@ title: Корзина
 <script src="js/spin.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     simpleCart({
+        checkout: {
+            type: "SendForm",
+            url: "https://obuchalkin-backend.appspot.com/cart",
+            success: "order-success.html",
+            cancel: "order-failure.html"
+        }
+    });
+
+    simpleCart({
         cartColumns: [
             { attr: "name" , label: "Набор" } ,
             { attr: "price" , label: "Цена", view: 'currency' } ,

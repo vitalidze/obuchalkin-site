@@ -1,0 +1,17 @@
+---
+layout: default
+title: Заказ успешно оформлен
+---
+
+<div class="content text-content">
+    <p>Ваш заказ номер <span id="order-number" style="font-weight: bold;"></span> успешно оформлен.</p>
+    <p>В ближайшее время по указанному телефону с Вами свяжется наш предствитель.</p>
+    <p><span style="font-size: 18px;">Спасибо за заказ!</span></p>
+</div>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $('#order-number').text(getParameterByName('orderId'))
+    });
+    simpleCart.empty();
+</script>
