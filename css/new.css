@@ -124,15 +124,35 @@ h2.heading {
 }
 
 div.card-image {
-    display: block;
-    float: left;
+    position: absolute;
     background: #ffffff;
+    border: 1px solid #000000;
+}
+
+div.card-image-1 {
+    z-index: 10;
+    margin-top: 40px;
+}
+
+div.card-image-2 {
+    z-index: 9;
+    margin-left: 60px;
+}
+
+div.card-image-3 {
+    z-index: 8;
+    margin-left: 121px;
+    margin-top: 60px;
+}
+
+div.card-image-4 {
+    z-index: 7;
+    margin-left: 163px;
+    margin-top: 40px;
 }
 
 img.card-image {
     width: 120px;
-    border: 1px solid #000000;
-    z-index: 100;
 }
 
 div.card-text {
