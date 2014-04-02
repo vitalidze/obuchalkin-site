@@ -40,11 +40,13 @@ a.nav-item-selected {
 }
 div.cards-gallery {
     width: auto;
-    max-width: 1120px;
+    max-width: 1090px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     background: #ffffff;
+    padding: 10px;
+    padding-top: 35px;
 }
 
 div.gallery-pic-container {
