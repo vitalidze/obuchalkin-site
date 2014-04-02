@@ -2,11 +2,11 @@
     {% for cardset in site.data.cardsets %}
         {% if page.url contains cardset.id | append: '.html' %}
             {% for picname in cardset.pictures %}
-                <div id="pic-{{picname}}" class="gallery-pic">
+                <div id="pic-{{picname}}" class="gallery-pic-container">
                     {% if cardset.back-pictures-format %}
                     <a href="#" onclick="flip_{{picname}}(event);">
                     {% endif %}
-                        <img src="img/{{cardset.id}}/{{picname}}.{{cardset.pictures-format}}" width="140">
+                        <div class="gallery-pic" style="background-image: url('img/{{cardset.id}}/{{picname}}.{{cardset.pictures-format}}')"></div>
                     {% if cardset.back-pictures-format %}
                     </a>
                     {% endif %}
@@ -16,7 +16,7 @@
                     function flip_{{picname}}(event) {
                         $('#pic-{{picname}}').flip({
                             direction: 'lr',
-                            content: '<a href="#" onclick="flip_back_{{picname}}(event);"><img src="img/{{cardset.id}}/back/{{picname}}.{{cardset.back-pictures-format}}" width="140"></a>',
+                            content: '<a href="#" onclick="flip_back_{{picname}}(event);"><div class="gallery-pic" style="background-image: url(\'img/{{cardset.id}}/back/{{picname}}.{{cardset.back-pictures-format}}\')"></div></a>',
                             speed: 250,
                             color: 'white'
                         });

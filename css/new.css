@@ -47,11 +47,17 @@ div.cards-gallery {
     background: #ffffff;
 }
 
-div.gallery-pic {
+div.gallery-pic-container {
     display: inline-block;
     border: solid #000000 1px;
     background-color: #ffffff;
     margin: 5px;
+    width: 140px;
+    height: 210px;
+}
+
+div.gallery-pic {
+    position: absolute;
     width: 140px;
     height: 210px;
 }
