@@ -1,8 +1,8 @@
-<div class="mjs-cards-gallery">
+<div class="cards-gallery">
     {% for cardset in site.data.cardsets %}
         {% if page.url contains cardset.id | append: '.html' %}
             {% for picname in cardset.pictures %}
-                <div id="pic-{{picname}}" class="mjs-gallery-pic">
+                <div id="pic-{{picname}}" class="gallery-pic">
                     {% if cardset.back-pictures-format %}
                     <a href="#" onclick="flip_{{picname}}(event);">
                     {% endif %}
