@@ -37,6 +37,8 @@ title: Корзина
         data["customerPhone"] = phone;
         data["customerAddress"] = document.getElementById("customer-address").value;
         data["customerEmail"] = document.getElementById("customer-email").value;
+        data["pickPoint"] = $('input[name="pick-point"]:checked').val()
+        data["pickupType"] = document.getElementById("pickup-type").value;
 
         $.magnificPopup.open({
             showCloseBtn: false,
@@ -134,7 +136,7 @@ title: Корзина
                             $('#' + clicked + '-params').toggle()
                             $('#' + opposite(id) + '-params').toggle()
 
-                            $('#pickyp-type').prop('value', clicked)
+                            $('#pickup-type').prop('value', clicked)
 
                             simpleCart({
                                  shippingFlatRate: (clicked == 'delivery' && simpleCart.total() < 3000 ? 150 : 0)
