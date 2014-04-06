@@ -24,7 +24,7 @@
         </div>
         <div class="card-text">
             <div class="card-info">
-                <span class="card-title">В набор входит {{ cardset.pictures | size }} карточка, размер 10х15 см, ламинированная с двух сторон, для детей от 6 месяцев</span>
+                <span class="card-title">В набор входит {{ cardset.pictures | size }} карточка, размер 10х15 см, ламинированная с двух сторон, для детей от {{ cardset.from }}</span>
             </div>
             <div class="card-info" style="position: relative; height: 55px;">
                 <input type="hidden" value="1" class="item_Quantity" style="width: 20px;">

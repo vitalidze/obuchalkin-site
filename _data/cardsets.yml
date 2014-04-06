@@ -4,6 +4,7 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
   pictures-format: png
   section: baby
+  from: 6 месяцев
 
 - id: figures
   title: Фигуры
@@ -11,6 +12,7 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
   pictures-format: jpg
   section: baby
+  from: 12 месяцев
 
 - id: alphabet
   title: Алфавит
@@ -19,6 +21,7 @@
   pictures-format: png
   back-pictures-format: jpg
   section: baby
+  from: 12 месяцев
 
 - id: colors
   title: Цвета
@@ -26,6 +29,7 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   pictures-format: png
   section: baby
+  from: 6 месяцев
 
 - id: numbers
   title: Числа
@@ -34,6 +38,7 @@
   pictures-format: png
   back-pictures-format: png
   section: baby
+  from: 12 месяцев
 
 - id: toys
   title: Игрушки
@@ -41,6 +46,7 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
   pictures-format: jpg
   section: fidget
+  from: 12 месяцев
 
 - id: vegetables
   title: Овощи
@@ -48,6 +54,7 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
   pictures-format: jpg
   section: fidget
+  from: 12 месяцев
 
 - id: fruits
   title: Фрукты
@@ -55,6 +62,7 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   pictures-format: jpg
   section: fidget
+  from: 12 месяцев
 
 - id: berries
   title: Ягоды
@@ -62,6 +70,7 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
   pictures-format: jpg
   section: fidget
+  from: 12 месяцев
 
 - id: pets
   title: Домашние животные
@@ -69,6 +78,7 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
   pictures-format: png
   section: fidget
+  from: 12 месяцев
 
 - id: professions
   title: Профессии
@@ -76,3 +86,4 @@
   pictures: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75]
   pictures-format: jpg
   section: fidget
+  from: 3 лет
