@@ -5,6 +5,7 @@
   pictures-format: png
   section: baby
   from: 6 месяцев
+  num_suff: ка
 
 - id: figures
   title: Фигуры
@@ -13,6 +14,7 @@
   pictures-format: jpg
   section: baby
   from: 12 месяцев
+  num_suff: ек
 
 - id: alphabet
   title: Алфавит
@@ -22,6 +24,7 @@
   back-pictures-format: jpg
   section: baby
   from: 12 месяцев
+  num_suff: ки
 
 - id: colors
   title: Цвета
@@ -30,6 +33,7 @@
   pictures-format: png
   section: baby
   from: 6 месяцев
+  num_suff: ек
 
 - id: numbers
   title: Числа
@@ -39,6 +43,7 @@
   back-pictures-format: png
   section: baby
   from: 12 месяцев
+  num_suff: ек
 
 - id: toys
   title: Игрушки
@@ -47,6 +52,7 @@
   pictures-format: jpg
   section: fidget
   from: 12 месяцев
+  num_suff: ек
 
 - id: vegetables
   title: Овощи
@@ -55,6 +61,7 @@
   pictures-format: jpg
   section: fidget
   from: 12 месяцев
+  num_suff: ек
 
 - id: fruits
   title: Фрукты
@@ -63,6 +70,7 @@
   pictures-format: jpg
   section: fidget
   from: 12 месяцев
+  num_suff: ек
 
 - id: berries
   title: Ягоды
@@ -71,6 +79,7 @@
   pictures-format: jpg
   section: fidget
   from: 12 месяцев
+  num_suff: ек
 
 - id: pets
   title: Домашние животные
@@ -79,6 +88,7 @@
   pictures-format: png
   section: fidget
   from: 12 месяцев
+  num_suff: ки
 
 - id: professions
   title: Профессии
@@ -87,3 +97,4 @@
   pictures-format: jpg
   section: fidget
   from: 3 лет
+  num_suff: ек

@@ -6,7 +6,7 @@
         <div style="text-align: center;">
             <span class="card-title" style="font-weight: bold; font-size: 22px;"><a class="card-title item_name" href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-txt">{{ cardset.title }}</a></span>
         </div>
-        <div style="height: 220px; width: 200px; padding-left: 10px; margin-top: 10px;">
+        <div style="height: 230px; width: 200px; padding-left: 10px; margin-top: 10px;">
             <a href="cards/{{cardset.id}}.html" id="{{cardset.id}}-popup-link-img">
                 <div class="card-image card-image-1">
                     <img src="img/{{ cardset.id }}/{{ cardset.pictures[0] }}.{{ cardset.pictures-format }}" class="card-image">
@@ -24,7 +24,7 @@
         </div>
         <div class="card-text">
             <div class="card-info">
-                <span class="card-title">В набор входит {{ cardset.pictures | size }} карточка, размер 10х15 см, ламинированная с двух сторон, для детей от {{ cardset.from }}</span>
+                <span class="card-title">В набор входит {{ cardset.pictures | size }} карточ{{ cardset.num_suff }}, размер 10х15 см, ламинированная с двух сторон, для детей от {{ cardset.from }}</span>
             </div>
             <div class="card-info" style="position: relative; height: 55px;">
                 <input type="hidden" value="1" class="item_Quantity" style="width: 20px;">
