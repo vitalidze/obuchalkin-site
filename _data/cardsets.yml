@@ -6,6 +6,7 @@
   section: baby
   from: 6 месяцев
   num_suff: ка
+  contain_suff: ит
 
 - id: figures
   title: Фигуры
