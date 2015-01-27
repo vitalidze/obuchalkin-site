@@ -1,0 +1,37 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2015-01-28 00:22">
+    <shop>
+        <name>ObuchalkinCom</name>
+        <company>ObuchalkinCom</company>
+        <url>http://www.obuchalkin.com/</url>
+        <platform>Jekyll</platform>
+        <version>1.4.2</version>
+        <agency>Self</agency>
+        <email>vitavaque@gmail.com</email>
+        <currencies><currency id="RUR" rate="1"/></currencies>
+        <categories><category id="1">Наборы</category></categories>
+        <local_delivery_cost>150</local_delivery_cost>
+        <offers>
+            {% for cardset in site.data.cardsets %}
+            <offer>
+                <url>http://www.obuchalkin.com/cards.html</url>
+                <price>{{ cardset.price }}</price>
+                <currencyId>RUR</currencyId>
+                <categoryId>1</categoryId>
+                <picture>http://www.obuchalkin.com/img/{{ cardset.id }}/{{ cardset.pictures[0] }}.{{ cardset.pictures-format }}</picture>
+                <picture>http://www.obuchalkin.com/img/{{ cardset.id }}/{{ cardset.pictures[1] }}.{{ cardset.pictures-format }}</picture>
+                <picture>http://www.obuchalkin.com/img/{{ cardset.id }}/{{ cardset.pictures[2] }}.{{ cardset.pictures-format }}</picture>
+                <picture>http://www.obuchalkin.com/img/{{ cardset.id }}/{{ cardset.pictures[3] }}.{{ cardset.pictures-format }}</picture>
+                <store>false</store>
+                <pickup>true</pickup>
+                <delivery>true</delivery>
+                <name>Набор {{ cardset.title }}</name>
+                <param name="Количество карточек в наборе">{{ cardset.pictures | size }}</param>
+            </offer>
+            {% endfor %}
+        </offers>
+    </shop>
+</yml_catalog>
